@@ -1,15 +1,15 @@
-// Smooth scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    });
+document.querySelectorAll(".checkbox").forEach(box => {
+  box.addEventListener("click", () => {
+    box.classList.toggle("checked");
   });
 });
 
-// Toggle checkbox state if used
-function toggleCheck(el) {
-  el.classList.toggle('checked');
-}
+document.querySelectorAll('a[href^=\"#\"]').forEach(link => {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
