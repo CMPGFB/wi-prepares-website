@@ -1,39 +1,42 @@
 :root {
-  --deep-purple: #3c0c87;
-  --soft-beige: #f2dcb2;
+  --purple: #3c0c87;
+  --beige: #f2dcb2;
   --white: #ffffff;
-  --text-dark: #2c3e50;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  --dark: #2c3e50;
 }
 
 body {
-  font-family: Georgia, serif;
+  margin: 0;
+  font-family: 'Georgia', serif;
   background: var(--white);
-  color: var(--text-dark);
-  line-height: 1.7;
+  color: var(--dark);
+  line-height: 1.6;
 }
 
 .container {
-  max-width: 1000px;
+  width: 90%;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
-header {
-  background: var(--deep-purple);
+/* Header */
+.header {
+  background: var(--purple);
   color: var(--white);
   padding: 1rem 0;
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  animation: slideDown 0.6s ease-out forwards;
 }
 
-nav {
+@keyframes slideDown {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(0); }
+}
+
+.nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -45,181 +48,197 @@ nav {
 }
 
 .nav-links {
-  display: flex;
   list-style: none;
-  gap: 1.25rem;
+  display: flex;
+  gap: 1rem;
 }
 
 .nav-links a {
   color: var(--white);
   text-decoration: none;
   font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-  text-decoration: underline;
+  color: var(--beige);
 }
 
+/* Hero */
 .hero {
-  background: var(--deep-purple);
+  background: var(--purple);
   color: var(--white);
   text-align: center;
-  padding: 4rem 2rem;
+  padding: 4rem 1rem;
+  animation: fadeIn 1s ease-out;
 }
 
 .hero h1 {
-  font-size: 2.75rem;
+  font-size: 2.5rem;
   margin-bottom: 0.5rem;
 }
 
 .hero p {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   margin-bottom: 1rem;
 }
 
 .senator-credit {
   font-style: italic;
-  opacity: 0.85;
+  opacity: 0.8;
 }
 
+/* Section */
 .section {
-  padding: 3rem 0;
+  margin: 4rem 0;
+  padding: 2rem;
   background: var(--white);
-}
-
-.section.beige {
-  background: var(--soft-beige);
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+  animation: fadeIn 0.8s ease-in;
 }
 
 .section-title {
   text-align: center;
-  color: var(--deep-purple);
+  color: var(--purple);
   font-size: 2rem;
-  margin-bottom: 2rem;
   position: relative;
+  margin-bottom: 2rem;
 }
 
 .section-title::after {
   content: "";
-  width: 60px;
+  width: 50px;
   height: 4px;
-  background: var(--deep-purple);
+  background: var(--purple);
   position: absolute;
-  bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
+  bottom: -10px;
 }
 
-.card-grid {
+/* Cards */
+.grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
 }
 
 .card {
-  background: var(--white);
-  border-left: 5px solid var(--deep-purple);
-  border-radius: 8px;
+  background: var(--beige);
   padding: 1.5rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border-left: 4px solid var(--purple);
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  animation: fadeInUp 0.6s ease-in;
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }
 
 .card h3 {
-  color: var(--deep-purple);
-  margin-bottom: 0.5rem;
+  margin-top: 0;
+  color: var(--purple);
 }
 
-.card p, .card ul {
-  font-size: 1rem;
+.card ul {
+  padding-left: 1.2rem;
 }
 
-.card ul li {
-  margin-bottom: 0.5rem;
-}
-
-.pro-tip {
+.tip {
+  background: rgba(60, 12, 135, 0.08);
+  padding: 0.75rem;
+  border-left: 4px solid var(--purple);
   margin-top: 1rem;
-  background: #eee4cc;
-  padding: 1rem;
-  border-left: 4px solid var(--deep-purple);
   border-radius: 6px;
+  font-style: italic;
 }
 
-.pro-tip h4 {
-  color: var(--deep-purple);
-  margin-bottom: 0.25rem;
-}
-
-.btn-download {
-  display: inline-block;
-  margin-top: 0.5rem;
-  padding: 0.75rem 1.25rem;
-  background: var(--deep-purple);
-  color: var(--white);
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-.btn-download:hover {
-  background: #2a085f;
-}
-
+/* Checklist */
 .checklist {
-  background: var(--soft-beige);
-  padding: 1.5rem;
-  border-radius: 6px;
+  margin-top: 1rem;
 }
 
 .checklist h4 {
-  color: var(--deep-purple);
+  color: var(--purple);
   margin-bottom: 1rem;
 }
 
 .checklist-item {
   display: flex;
   align-items: center;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
+  gap: 0.75rem;
 }
 
 .checkbox {
   width: 20px;
   height: 20px;
-  border: 2px solid var(--deep-purple);
-  border-radius: 3px;
-  margin-right: 1rem;
-  cursor: pointer;
+  border: 2px solid var(--purple);
+  border-radius: 4px;
+  display: inline-block;
   position: relative;
+  cursor: pointer;
 }
 
 .checkbox.checked {
-  background: var(--deep-purple);
+  background: var(--purple);
 }
 
 .checkbox.checked::after {
-  content: "✓";
-  color: var(--white);
-  font-size: 14px;
+  content: \"✓\";
+  color: white;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-footer {
-  background: var(--deep-purple);
+/* Button */
+.btn-download {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--purple);
   color: var(--white);
-  text-align: center;
-  padding: 2rem 1rem;
-  margin-top: 3rem;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.3s ease;
 }
 
+.btn-download:hover {
+  background: #2a085f;
+}
+
+/* Footer */
+footer {
+  background: var(--purple);
+  color: var(--white);
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 4rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 2rem;
   }
   .nav-links {
-    gap: 0.75rem;
-    font-size: 0.9rem;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
