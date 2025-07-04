@@ -1,4 +1,4 @@
-# 🛡️ WI Prepares – Preparing Wisconsin for The Unexpected
+# 🛡️ WI Prepares – Preparing WI for The Unexpected
 
 **WI Prepares** is a mobile-responsive, accessible public awareness site designed to help Wisconsin residents prepare for unexpected emergencies, economic shifts, and service disruptions. Created in collaboration with **Senator Dora Drake**, the site empowers families with readiness knowledge grounded in wisdom and local relevance.
 
@@ -40,10 +40,10 @@
 
 🛠️ ShadCN UI – UI inspiration
 
-💜 Built by Christopher Perceptions 
+🙏🏾 Built by Christopher Perceptions 
 
 ---
 
-📄 License
+## 📄 License
 
 MIT — Free to use, adapt, remix, and share in service to your local community or state.
