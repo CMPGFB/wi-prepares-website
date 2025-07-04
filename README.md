@@ -22,17 +22,6 @@
 
 ---
 
-## 📁 File Structure
-
-├── index.html                # Main HTML layout
-├── style.css                 # Tailwind-based styling
-├── script.js                 # Checkbox toggles & animations
-├── assets/
-│   └── social-share.png      # OG preview image
-└── README.md
-
----
-
 ## 🔥 Features
 
 - 📱 **Mobile-first** responsive design
@@ -42,27 +31,6 @@
 - 📥 **PDF download** for offline preparation
 - 🔁 **Quarterly maintenance accordion**
 - ✅ **Interactive checklist toggles**
-
----
-
-## 📜 Social Metadata
-
-Includes Open Graph + Twitter card meta tags for optimal sharing:
-
-```html
-<!-- Open Graph -->
-<meta property="og:title" content="WI Prepares – Preparing Wisconsin for The Unexpected" />
-<meta property="og:description" content="A public readiness guide for Wisconsin families to prepare for emergencies with wisdom and confidence." />
-<meta property="og:image" content="https://wiprepares.com/assets/social-share.png" />
-<meta property="og:url" content="https://wiprepares.com" />
-<meta property="og:type" content="website" />
-
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="WI Prepares – Preparing Wisconsin for The Unexpected" />
-<meta name="twitter:description" content="A public readiness guide for Wisconsin families to prepare for emergencies with wisdom and confidence." />
-<meta name="twitter:image" content="https://wiprepares.com/assets/social-share.png" />
-```
 
 ---
 
