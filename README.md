@@ -66,10 +66,13 @@ Includes Open Graph + Twitter card meta tags for optimal sharing:
 
 ---
 
-🙌 Credits
-	•	👩🏽‍⚖️ Senator Dora Drake – Legislative insight & community vision
-	•	🛠️ ShadCN UI – UI inspiration
-	•	✍🏽 Built by Christopher Perceptions 
+✅ Credits
+
+🤝 Senator Dora Drake – Legislative insight & community vision
+
+🛠️ ShadCN UI – UI inspiration
+
+💜 Built by Christopher Perceptions 
 
 ---
 
